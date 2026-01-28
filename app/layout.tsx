@@ -1,4 +1,5 @@
 import "./globals.css";
+import Header from "@/ui/Header";
 
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>{children}</body>
+      <body className={ubuntu.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
